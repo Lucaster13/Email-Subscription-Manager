@@ -1,11 +1,24 @@
 import React from 'react';
-import './App.css';
-import GmailSubList from './gmailAPI/GmailSubList'
+
+//ROUTING IMPORTS
+import {Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+
+
+//COMPONENT IMPORTS FOR ROUTING
+import LoginPage from './components/LoginPage'
+import ProfilePage from './components/ProfilePage'
 
 function App() {
   return (
     <div className="App">
-      <GmailSubList />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={LoginPage} />
+          <Route path="/profile" component={ProfilePage} />
+            {/* <Route path="/about" component={AboutPage} />
+            <Route component={Notfound} /> */}
+        </Switch>
+      </Router>
     </div>
   );
 }
