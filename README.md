@@ -1,5 +1,5 @@
 # Email-Subscription-Manager
 Manage Gmail Subscriptions
 
-  cd web-app
-  npm start
+	cd web-app
+	npm start
