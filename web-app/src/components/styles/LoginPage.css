@@ -1,0 +1,130 @@
+
+/* LOGIN PAGE CSS */
+#LoginPage {
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    height:100vh; 
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+   
+}
+
+body{
+    margin: 0;
+}
+/* END LOGIN PAGE CSS */
+
+/* LOGIN HEADER CSS */
+#LoginHeader{
+    display: grid;
+    position: sticky;
+    height: 100px;
+    grid-template-columns: 2fr 9fr 1fr;
+    background-color: rgba(97, 122, 202, 0.267);
+    box-shadow: 0 4px 30px 0 rgb(54, 71, 125), 0 6px 20px 0 rgba(35, 47, 87, 0.249);
+}
+/* END LOGIN HEADER CSS */
+
+/* LOGIN BODY CSS */
+#LoginBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 600px;
+}
+
+#SignInText{
+    position: relative;
+    right: 20px;
+    text-align: right;
+    padding: 300px 0;
+}
+/* END LOGIN BODY CSS */
+
+/* LOGIN FOOTER CSS */
+#LoginFooter{
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    position: sticky;
+    height: 100px;
+    background-color: rgba(97, 122, 202, 0.267);
+    box-shadow: 0 -4px 30px 0 rgb(54, 71, 125), 0 -6px 20px 0 rgba(35, 47, 87, 0.249);
+}
+/* END LOGIN FOOTER CSS */
+
+/* LOGIN BUTTONS CSS */
+#LoginButton{
+    text-align: left;
+    padding: 259px 0 0 0;
+}
+
+#GoogleButton{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    display: inline-block;
+    
+}
+
+#GoogleButton:hover {
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+
+#GoogleButton:active {
+    filter: grayscale(25%) ;  
+
+}
+
+
+#HomeBtn{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    position: relative;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#HomeBtnImg{
+    margin: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+#HomeBtn:hover{
+    cursor: pointer;
+}
+
+#HomeBtnImg:hover {
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#HomeBtnImg:active {
+    filter: grayscale(25%);  
+}
+
+#HomeBtnTxt{
+    text-align: left;
+    margin: auto 0;
+    width: 250px;
+    height: 34px;
+}
+
+.Button{
+    text-align: center;
+    border-left: solid;
+    border-right: solid;
+    border-width: 1px;
+    padding: 25px;
+}
+
+h3{
+    margin: 0px;
+}
+/* END LOGIN BUTTONS CSS */

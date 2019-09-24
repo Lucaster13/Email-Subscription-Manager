@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import store from 'store';
 import LoginHeader from './LoginHeader';
 import LoginBody from './LoginBody';
 import LoginFooter from './LoginFooter'
@@ -8,29 +9,20 @@ class LoginPage extends Component {
 
     state = {
         isLoggedIn: false,
-        user: null
     }
 
     getLoginStatus = (status,user=null) => {
         this.setState({
             isLoggedIn: status,
-            user: user
         })
+        store.set('user', user);
     }
 
     componentDidUpdate(prevState){
         if(this.state.isLoggedIn !== prevState.isLoggedIn){
             console.log(`Changing login status to: ${this.state.isLoggedIn}`);
-            console.log(this.state.user);
             if(this.state.isLoggedIn){
-                this.props.history.push({
-                    pathname:'/profile',
-                    state: {
-                        isLoggedIn: true,
-                        name: this.state.user.name,
-                        image: this.state.user.image
-                    }
-                })
+                this.props.history.push("/profile");
             }
         }
     }

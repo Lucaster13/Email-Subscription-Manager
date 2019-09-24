@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Button.css'
+import './styles/LoginPage.css'
 
 const HeaderButton = ({text}) => {
     return (

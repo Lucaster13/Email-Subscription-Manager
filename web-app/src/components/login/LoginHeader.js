@@ -1,12 +1,12 @@
 import React from 'react';
-import Icon from './Icon';
-import Button from './Button'
-import '../styles/LoginHeader.css'
+import HomeButton from '../HomeButton';
+import Button from '../Button'
+import '../styles/LoginPage.css'
 
 const LoginHeader = (props) => {
     return (
         <div id="LoginHeader">
-            <Icon/>
+            <HomeButton/>
             <div></div>
             <Button text="Sign In"/>
         </div>  

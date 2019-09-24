@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from './Button';
-import '../styles/LoginFooter.css';
+import Button from '../Button';
+import '../styles/LoginPage.css';
 
 const LoginFooter = (props) => {
     return(
