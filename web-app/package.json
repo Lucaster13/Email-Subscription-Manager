@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "base64url": "^3.0.1",
     "child-process-promise": "^2.2.1",
     "dotenv": "^8.1.0",
     "googleapis": "^39.2.0",
