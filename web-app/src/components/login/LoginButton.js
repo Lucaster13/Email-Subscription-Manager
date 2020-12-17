@@ -1,8 +1,11 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login';
+import '../styles/reset.css';
 import '../styles/LoginPage.css';
 import LoginLogo from '../images/LoginLogo.svg';
-import {session_clr, session_set} from "../../utils.js";
+import {session_clr, session_set} from "../../dev/sessionUtils.js";
+
+const OAUTH_SCOPE = "https://www.googleapis.com/auth/gmail.modify";
 
 
 const LoginButton = (props) => {
@@ -15,16 +18,17 @@ const LoginButton = (props) => {
       name: response.profileObj.name,
       imageUrl: response.profileObj.imageUrl,
       isSignedIn: response.isSignedIn,
-      accessToken: response.accessToken
+      access_token: response.accessToken,
+      userId: response.googleId
     }
     session_set("user", googleUser);
 
-    // cahnge to profile page
-    window.location.href = "/profile";
+    // redirect to profile page
+    window.location.href = `/profile/${response.googleId}`;
   }
    
-  const onFailure = (response) => {
-    console.error(response, "failed to log into google");
+  const onFailure = (err) => {
+    console.error("failed to log into google:", err.error);
     session_clr();
   }
 
@@ -37,7 +41,7 @@ const LoginButton = (props) => {
               <img src={LoginLogo} alt=""></img>
             </button>
           )}
-          scope="https://www.googleapis.com/auth/gmail.modify"
+          scope={OAUTH_SCOPE}
           buttonText="Login"
           onSuccess={onSuccess}
           onFailure={onFailure}

@@ -29,29 +29,66 @@ body{
 
 /* PROFILE BODY CSS */
 #ProfileBody{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    padding: 3em 2em;
 }
 
-#ProfileEmails{
-    border-right: 1px solid grey;
+#subView{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+#subListDiv{
+    padding: 2em;
+    border: 1px solid black;
+    height: 45em;
+    overflow: scroll;
+}
+
+.unsubDiv{
+    padding: 2em 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+}  
+
+.unsubDiv:hover{
+    cursor: pointer;
+}  
+
+#subInfoDiv{
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+    padding: 2em;
     text-align: center;
 }
 
-#ProfileOptions{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(10,1fr);
-    border: 1px solid grey;
-    text-align: center;
+#subInfoDiv h2{
+    font-size: 3em;
+    font-weight: bold;
 }
 
-#ProfileEmailsText{
-    position: relative;
-    margin: 0 auto;
-    width: 350px;
-    top: 40%;
+#subInfoBody{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3em;
 }
+
+#subInfoBody h4{
+    padding: 1em;
+    margin: 1em 0;
+}
+
+#subInfoKeys{
+    text-align: right;
+    border-right: 1px solid black;
+}
+
+#subInfoValues{
+    text-align: left;
+    border-left: 1px solid black;
+}
+
+
 /* END PROFILE BODY CSS */
 
 /* PROFILE FOOTER CSS */

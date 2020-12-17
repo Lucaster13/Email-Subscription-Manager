@@ -4,17 +4,16 @@ import Button from "../Button.js";
 import HomeButton from "../HomeButton.js";
 
 import '../styles/LoginPage.css';
+import '../styles/reset.css';
 
-class LoginPage extends Component {
-    render(){
-        return (
-            <div id= "LoginPage">
-                <LoginHeader/>
-                <LoginBody loginFunc={this.getLoginStatus}/>
-                <LoginFooter/>
-            </div>
-        )
-    }
+function LoginPage () {
+    return (
+        <div id= "LoginPage">
+            <LoginHeader/>
+            <LoginBody/>
+            <LoginFooter/>
+        </div>
+    )
 }
 
 export default LoginPage;
@@ -61,7 +60,7 @@ class LoginBody extends Component{
         return (
             <div id="LoginBody">
                 <div id="SignInText">Sign In Here&nbsp;&nbsp;&nbsp;</div>
-                <LoginButton loginFunc={this.props.loginFunc}/>
+                <LoginButton/>
             </div>  
         )
     }
